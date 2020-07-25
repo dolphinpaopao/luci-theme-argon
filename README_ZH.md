@@ -1,5 +1,4 @@
-# luci-theme-argon ([中文](/README_ZH.md))
-
+# luci-theme-argon ([Eng](/README.md))
 [1]: https://img.shields.io/badge/license-MIT-brightgreen.svg
 [2]: /LICENSE
 [3]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
@@ -19,16 +18,19 @@
 [![Contact Me][10]][11]
 
 
-A new Luci theme for LEDE/OpenWRT  
-Argon is a clean HTML5 theme for LuCI. It is based on luci-theme-material and Argon Template  
+![](/Screenshots/pc1.jpg)
+![](/Screenshots/phone.jpg)
+全新的 Openwrt 主题，基于luci-theme-material 和 开源免费的 Argon 模板进行移植。 
 
-## Notice
+## 注意
+当前master版本基于官方 OpenWrt 19.07.1 稳定版固件进行移植适配。  
+v2.2 适配官方主线快照版本。  
+v1.6.2 适配18.06 和 Lean Openwrt [如果你是lean代码 请选择这个版本]
 
-This branch only matches lean openwrt LuCI 18.06.
 
-## How to build
+## 如何使用
+进入 openwrt/package/lean  或者其他目录
 
-Enter in your openwrt/package/lean  or  other
 ####Lean lede
 ```
 cd lede/package/lean  
@@ -38,7 +40,15 @@ make menuconfig #choose LUCI->Theme->Luci-theme-argon
 make -j1 V=s  
 ```
 
-## Install 
+####Openwrt SnapShots
+```
+cd openwrt/package
+git clone https://github.com/jerrykuku/luci-theme-argon.git  
+make menuconfig #choose LUCI->Theme->Luci-theme-argon  
+make -j1 V=s  
+```
+
+## 安装 
 
 ### For Lean openwrt 18.06 LuCI
 ```
@@ -46,21 +56,23 @@ wget --no-check-certificate https://github.com/jerrykuku/luci-theme-argon/releas
 opkg install luci-theme-argon*.ipk
 ```
 
+
 ## Update log 2020.07.25 [18.06] V1.6.2 
 
-- New login theme, Request background imge from bing.com, Auto change everyday. 
-- New theme icon 
-- Add more menu category  icon 
-- Fix font-size and padding margin 
-- Restructure css file 
-- Auto adapt to dark mode
+- 全新的登录界面,图片背景跟随Bing.com，每天自动切换 
+- 全新的主题icon 
+- 增加多个导航icon 
+- 细致的微调了 字号大小边距等等 
+- 重构了css文件 
+- 自动适应的暗黑模式
 
-## Screenshots 
+
+## 截图
 ![](/Screenshots/pc/screenshot1.jpg)
 ![](/Screenshots/pc/screenshot2.jpg)
 ![](/Screenshots/pc/screenshot3.jpg)
 ![](/Screenshots/phone/Screenshot_1.jpg)
 ![](/Screenshots/phone/Screenshot_2.jpg)
 
-## Thanks to 
+## 感谢
 luci-theme-material: https://github.com/LuttyYang/luci-theme-material/
