@@ -42,7 +42,7 @@
                 <footer class="mobile-hide">
 					<div>
 						<a class="luci-link" href="https://github.com/openwrt/luci">Powered by <%= ver.luciname %> (<%= ver.luciversion %>)</a> /
-						<a href="https://github.com/jerrykuku/luci-theme-argon">ArgonTheme v1.6</a> /
+						<a href="https://github.com/jerrykuku/luci-theme-argon">ArgonTheme v1.6.5</a> /
 						<%= ver.distversion %>
 						<% if #categories > 1 then %>
 						<ul class="breadcrumb pull-right" id="modemenu">
@@ -61,6 +61,6 @@
         var luciLocation = <%= luci.http.write_json(luci.dispatcher.context.path) %>;
     </script>
     
-    <script src="<%=media%>/js/script.js?v=<%=math.random(1,100000)%>"></script>
+    <script src="<%=media%>/js/script.js"></script>
 </body>
 </html>
